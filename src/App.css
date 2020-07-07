@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -28,6 +31,57 @@
   color: #61dafb;
 }
 
+.group-balls {
+  margin-top: 200px;
+  width: 500px;
+  height: 500px;
+  background-color: royalblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-ball {
+  width: 100%;
+  height: 33%;
+  background-color: yellow;
+  align-self: baseline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rotate-balls {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: red;
+  /* animation: App-logo-spin infinite 5s linear; */
+  display: grid;
+  grid-gap: 3vh;
+  grid-template-rows: 2.5fr 2.5fr 2.5fr 2.5fr;
+  grid-template-columns: 3.3fr 3.3fr 3.3fr;
+}
+.ball {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: App-logo-spin infinite 5s linear;
+  background: linear-gradient(
+    60deg,
+    rgba(230, 67, 45, 1) 0%,
+    rgba(246, 176, 50, 1) 70%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: baseline;
+  grid-area: 1 / 2 / 4 / 3;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
