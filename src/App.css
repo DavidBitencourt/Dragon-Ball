@@ -6,7 +6,8 @@
 }
 
 body {
-  background: #ffffff;
+  /* background: linear-gradient(120deg, rgba(229, 67, 45, 1) 0%, rgba(255, 237, 52, 1) 100%); */
+  background: #000000;
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;

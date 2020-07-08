@@ -11,8 +11,8 @@ const rotate = keyframes`
 `;
 
 export const ContainerStyled = styled.div`
-  width: 700px;
-  height: 700px;
+  width: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,8 +29,8 @@ export const BoxBallsStyled = styled.div`
 `;
 
 export const BallStyled = styled.div`
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: linear-gradient(
     60deg,
@@ -49,7 +49,7 @@ export const StarsBoxStyled = styled.div`
   height: 100%;
   border-radius: 50%;
   animation: ${rotate} infinite 3s linear;
-  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px 5px rgba(255, 237, 52, 1);
   display: ${({ stars }) => (stars ? "grid" : "flex")};
   align-items: center;
   justify-content: center;
@@ -76,8 +76,8 @@ export const StarsBoxStyled = styled.div`
 `;
 
 export const ImgStarStyled = styled.img`
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   margin: ${({ margin }) => margin && `${margin}px`};
   position: ${({ position }) => position && "absolute"};
   align-self: ${({ alignSelf }) => (alignSelf ? alignSelf : "center")};

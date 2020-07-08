@@ -1,12 +1,18 @@
 import React from "react";
 import DragonBall from "../../components/DragonBall";
-import { ContainerStyled } from "./styles";
+import { ButtonStyled, ContainerStyled, TitleBoxStyled } from "./styles";
 
 function Home() {
   return (
-    <ContainerStyled>
-      <DragonBall />
-    </ContainerStyled>
+    <>
+      <ContainerStyled>
+        <TitleBoxStyled>
+          {/* <TitleStyled>Dragon Ball</TitleStyled> */}
+        </TitleBoxStyled>
+        <DragonBall />
+      </ContainerStyled>
+      <ButtonStyled>Avançar</ButtonStyled>
+    </>
   );
 }
 
