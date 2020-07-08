@@ -9,11 +9,16 @@ import {
   StarsBoxStyled,
 } from "./styles";
 
-function DragonBall() {
+function DragonBall({ timeRotate }) {
   return (
     <ContainerStyled>
-      <BoxBallsStyled>
-        <BallStyled gridRow={1} gridColumn={2} justifySelf="flex-start">
+      <BoxBallsStyled timeRotate={timeRotate}>
+        <BallStyled
+          timeRotate={timeRotate}
+          gridRow={1}
+          gridColumn={2}
+          justifySelf="flex-start"
+        >
           <StarsBoxStyled>
             <ImgStarStyled src={star} alt="star" />
           </StarsBoxStyled>
@@ -23,6 +28,7 @@ function DragonBall() {
           gridColumn={1}
           alignSelf="flex-start"
           justifySelf="center"
+          timeRotate={timeRotate}
         >
           <StarsBoxStyled gridRow={2} gridColumn={2}>
             <ImgStarStyled src={star} alt="star" margin={5} />
@@ -34,6 +40,7 @@ function DragonBall() {
           gridColumn={3}
           alignSelf="flex-start"
           justifySelf="center"
+          timeRotate={timeRotate}
         >
           <StarsBoxStyled stars={3}>
             <ImgStarStyled
@@ -61,6 +68,7 @@ function DragonBall() {
           gridColumn={1}
           alignSelf="flex-end"
           justifySelf="center"
+          timeRotate={timeRotate}
         >
           <StarsBoxStyled stars={4}>
             <ImgStarStyled
@@ -94,6 +102,7 @@ function DragonBall() {
           gridColumn={3}
           alignSelf="flex-end"
           justifySelf="center"
+          timeRotate={timeRotate}
         >
           <StarsBoxStyled stars={5}>
             <ImgStarStyled
@@ -132,7 +141,12 @@ function DragonBall() {
             />
           </StarsBoxStyled>
         </BallStyled>
-        <BallStyled gridRow={4} gridColumn={2} justifySelf="flex-start">
+        <BallStyled
+          timeRotate={timeRotate}
+          gridRow={4}
+          gridColumn={2}
+          justifySelf="flex-start"
+        >
           <StarsBoxStyled stars={6}>
             <ImgStarStyled
               src={star}
@@ -199,8 +213,8 @@ function DragonBall() {
           </StarsBoxStyled>
         </BallStyled>
       </BoxBallsStyled>
-      <BallStyled position>
-        <StarsBoxStyled stars={6}>
+      <BallStyled timeRotate={timeRotate} position>
+        <StarsBoxStyled stars={6} timeRotate={timeRotate}>
           <ImgStarStyled
             src={star}
             alt="star"

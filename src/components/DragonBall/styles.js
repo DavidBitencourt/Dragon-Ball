@@ -22,7 +22,7 @@ export const BoxBallsStyled = styled.div`
   width: 90%;
   height: 80%;
   border-radius: 50%;
-  animation: ${rotate} infinite 5s linear;
+  animation: ${rotate} infinite ${({ timeRotate }) => timeRotate}s linear;
   display: grid;
   grid-template-rows: 2.5fr 2.5fr 2.5fr 2.5fr;
   grid-template-columns: 4.25fr 1.5fr 4.25fr;
@@ -42,14 +42,21 @@ export const BallStyled = styled.div`
   grid-area: ${({ gridRow, gridColumn }) => `${gridRow}/${gridColumn}`};
   position: ${({ position }) => position && "absolute"};
   box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.5);
+  ${({ timeRotate }) =>
+    timeRotate === 0.5 &&
+    css`
+      background: rgba(255, 237, 52, 1);
+    `}
 `;
 
 export const StarsBoxStyled = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  animation: ${rotate} infinite 3s linear;
-  box-shadow: 1px 1px 5px 5px rgba(255, 237, 52, 1);
+  animation: ${rotate} infinite ${({ timeRotate }) =>
+  timeRotate ? timeRotate : 5}s linear;
+  box-shadow: 1px 0px 10px ${({ timeRotate }) =>
+    timeRotate === 0.5 ? 15 : 10}px rgba(255, 237, 52, 1);
   display: ${({ stars }) => (stars ? "grid" : "flex")};
   align-items: center;
   justify-content: center;

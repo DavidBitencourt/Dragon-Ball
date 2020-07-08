@@ -38,26 +38,37 @@ export const ImgStyled = styled.img`
   height: 200px;
 `;
 
-export const ButtonStyled = styled.div`
-  width: 250px;
+export const ButtonStyled = styled.button`
+  width: 350px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 50px;
-  background: linear-gradient(
-    90deg,
-    rgba(229, 67, 45, 1) 0%,
-    rgba(255, 237, 52, 1) 100%
+  background: -webkit-linear-gradient(
+    rgba(229, 67, 45, 1),
+    rgba(255, 237, 52, 1)
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 50px;
   font-size: 25px;
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-  color: #000;
+  text-align: center;
+  border-style: none;
   :hover {
     cursor: pointer;
+    transition: 1.5s;
+    background: -webkit-linear-gradient(
+      rgba(229, 67, 45, 1),
+      rgba(255, 237, 52, 1)
+    );
+    -webkit-text-fill-color: #000;
+  }
+  :focus {
+    outline: none;
   }
 `;
